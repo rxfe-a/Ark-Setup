@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+<ModulePrefs title="a" />
+<Content type="html"><![CDATA[
+	<html>
+    <head>
+  <!--
+░█████╗░██████╗░██╗░░██╗
+██╔══██╗██╔══██╗██║░██╔╝
+███████║██████╔╝█████═╝░
+██╔══██║██╔══██╗██╔═██╗░
+██║░░██║██║░░██║██║░╚██╗
+╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝
+
+Copyright rxfe 2023
+GNU Free Software
+
+Got a complain?
+Email : support@rxfe.xyz
+-->
+    <style>
+    body {
+            margin: 0;
+            padding: 0;
+            background-color: #1c1c1c;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #logo {
+            width: 250px; /* Adjust the width and height as needed */
+            height: 150px;
+        }
+
+        #loading-container {
+            border-radius: 50px;
+            width: 100%;
+            max-width: 400px; /* Adjust the width as needed */
+            height: 10px;
+            background-color: #111111;
+            position: relative;
+        }
+
+        #loading-bar {
+            border-radius: 50px;
+            width: 0;
+            height: 100%;
+            background-color: #ffffff; /* Adjust the color as needed */
+            position: absolute;
+            animation: loadingAnimation 2s linear infinite; /* Add animation */
+        }
+
+        @keyframes loadingAnimation {
+            0% {
+                left: 0;
+            }
+            50% {
+                left: 100%;
+                width: 0;
+            }
+            100% {
+                left: 0;
+                width: 100%;
+            }
+        }
+    </style>
+    </head>
+    <body>
+    <img id="logo" src="https://cdn.jsdelivr.net/gh/rxfe-a/Ark-Setup@latest/ark_Sidewayz.png" alt="Logo" />
+    <div id="loading-container">
+        <div id="loading-bar"></div>
+    </div>
+	<script>
+    setTimeout(() => {
+            let inFrame = true;
+const popup = open("about:blank", "_blank");
+if (!popup || popup.closed) {
+  alert("Please allow popups and redirects.");
+} else {
+  const doc = popup.document;
+  const iframe = doc.createElement("iframe");
+  const style = iframe.style;
+  const link = doc.createElement("link");
+  const name = localStorage.getItem("name") || "My Drive - Google Drive";
+  const icon = localStorage.getItem("icon") || "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png";
+
+  doc.title = name;
+  link.rel = "icon";
+  link.href = icon;
+  iframe.src = 'https://ark-lobby.pages.dev/login.html';
+
+  style.position = "fixed";
+  style.top = style.bottom = style.left = style.right = 0;
+  style.border = style.outline = "none";
+  style.width = style.height = "100%";
+
+  doc.head.appendChild(link);
+  doc.body.appendChild(iframe);
+
+  location.replace("https://www.nasa.gov/");
+}
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  if (window.localStorage.getItem("v4Particles") === "true") {
+    const scr = document.createElement("script");
+    scr.src = "/scripts/academia.js";
+    document.body.appendChild(scr);
+  }
+});
+
+}, 2000);
+	</script>
+	</body></html>
+]]></Content>
+</Module>
